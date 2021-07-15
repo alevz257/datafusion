@@ -14,4 +14,5 @@ push to datafusion:
     - export INSTANCE_ID=${INSTANCE_NAME}
     - export CDAP_ENDPOINT=$(gcloud beta data-fusion instances describe --location=asia-southeast2 --format="value(apiEndpoint)" ${INSTANCE_ID})
     - echo $CDAP_ENDPOINT
+    - echo $INSTANCE_ID
       
