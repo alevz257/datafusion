@@ -10,9 +10,8 @@ push to datafusion:
     - echo $GCLOUD_SERVICE_KEY > ${HOME}/gcloud-service-key.json
     - gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
     - gcloud config set project ${PROJECT_ID}
-    - export PIPELINE=$(cat DataFusionQuickstart-cdap-data-pipeline.json)
     - export AUTH_TOKEN=$(gcloud auth print-access-token)
     - export INSTANCE_ID=${INSTANCE_NAME}
-    - export CDAP_ENDPOINT=$(gcloud beta data-fusion instances describe --location=<region> --format="value(apiEndpoint)" ${INSTANCE_ID})
-    - echo $AUTH_TOKEN
+    - export CDAP_ENDPOINT=$(gcloud beta data-fusion instances describe --location=asia-southeast2 --format="value(apiEndpoint)" ${INSTANCE_ID})
+    - echo $CDAP_ENDPOINT
       
