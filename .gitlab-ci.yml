@@ -5,12 +5,12 @@ stages:
 
 push to datafusion:
     image: google/cloud-sdk:latest
-      stage: push to datafusion
-        script: 
-          - echo $GCLOUD_SERVICE_KEY > ${HOME}/gcloud-service-key.json
-          - gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
-          - gcloud config set project ${PROJECT_ID}
-          - export PIPELINE=$(cat DataFusionQuickstart-cdap-data-pipeline.json)
-          - export AUTH_TOKEN=$(gcloud auth print-access-token)
-          - export CDAP_ENDPOINT=$(gcloud beta data-fusion instances describe --location=<region> --format="value(apiEndpoint)" ${INSTANCE_ID})
-          - curl --request PUT --header "Authorization: Bearer ${AUTH_TOKEN}" "${CDF_API}/v3/namespaces/default/apps/DataFusionQuickstart" --data "@./DataFusionQuickstart-cdap-data-pipeline.json"
+    stage: push to datafusion
+    script: 
+      - echo $GCLOUD_SERVICE_KEY > ${HOME}/gcloud-service-key.json
+      - gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
+      - gcloud config set project ${PROJECT_ID}
+      - export PIPELINE=$(cat DataFusionQuickstart-cdap-data-pipeline.json)
+      - export AUTH_TOKEN=$(gcloud auth print-access-token)
+      - export CDAP_ENDPOINT=$(gcloud beta data-fusion instances describe --location=<region> --format="value(apiEndpoint)" ${INSTANCE_ID})
+      - curl --request PUT --header "Authorization: Bearer ${AUTH_TOKEN}" "${CDF_API}/v3/namespaces/default/apps/DataFusionQuickstart" --data "@./DataFusionQuickstart-cdap-data-pipeline.json"
