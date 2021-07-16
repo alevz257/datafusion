@@ -12,6 +12,6 @@ push to datafusion:
       - gcloud config set project ${PROJECT_ID}
       - export PIPELINE=$(cat DataFusionQuickstart-cdap-data-pipeline.json)
       - export AUTH_TOKEN=$(gcloud auth print-access-token)
-      - export CDAP_ENDPOINT=$(gcloud beta data-fusion instances describe --location=<region> --format="value(apiEndpoint)" ${INSTANCE_ID})
+      - export CDAP_ENDPOINT=$(gcloud beta data-fusion instances describe --location=asia-southeast2 --format="value(apiEndpoint)" ${INSTANCE_ID})
       - pip install requests
       - python3 send.py
