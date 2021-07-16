@@ -18,10 +18,10 @@
         "connections": [
             {
                 "from": "NYT Best Sellers Raw Data",
-                "to": "Parsing and Transformations"
+                "to": "Parsing Parsing and Transformations Transformation"
             },
             {
-                "from": "Parsing and Transformations",
+                "from": "Parsing Parsing and Transformations Transformation",
                 "to": "Top Rated Inexpensive Books"
             }
         ],
@@ -58,11 +58,11 @@
                 "id": "NYT-Best-Sellers-Raw-Data"
             },
             {
-                "name": "Parsing and Transformations",
+                "name": "Parsing Parsing and Transformations Transformation",
                 "plugin": {
                     "name": "Wrangler",
                     "type": "transform",
-                    "label": "Parsing and Transformations",
+                    "label": "Parsing Parsing and Transformations Transformation",
                     "artifact": {
                         "name": "wrangler-transform",
                         "version": "4.4.1",
@@ -109,7 +109,7 @@
                 "outputSchema": "{\"type\":\"record\",\"name\":\"etlSchemaBody\",\"fields\":[{\"name\":\"amazon_product_url\",\"type\":[\"string\",\"null\"]},{\"name\":\"author\",\"type\":[\"string\",\"null\"]},{\"name\":\"description\",\"type\":[\"string\",\"null\"]},{\"name\":\"publisher\",\"type\":[\"string\",\"null\"]},{\"name\":\"title\",\"type\":[\"string\",\"null\"]},{\"name\":\"id\",\"type\":[\"string\",\"null\"]},{\"name\":\"rank\",\"type\":[\"long\",\"null\"]},{\"name\":\"price_final\",\"type\":[\"double\",\"null\"]}]}",
                 "inputSchema": [
                     {
-                        "name": "Parsing and Transformations",
+                        "name": "Parsing Parsing and Transformations Transformation",
                         "schema": "{\"type\":\"record\",\"name\":\"etlSchemaBody\",\"fields\":[{\"name\":\"amazon_product_url\",\"type\":[\"string\",\"null\"]},{\"name\":\"author\",\"type\":[\"string\",\"null\"]},{\"name\":\"description\",\"type\":[\"string\",\"null\"]},{\"name\":\"publisher\",\"type\":[\"string\",\"null\"]},{\"name\":\"title\",\"type\":[\"string\",\"null\"]},{\"name\":\"id\",\"type\":[\"string\",\"null\"]},{\"name\":\"rank\",\"type\":[\"long\",\"null\"]},{\"name\":\"price_final\",\"type\":[\"double\",\"null\"]}]}"
                     }
                 ],
