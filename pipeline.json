@@ -18,10 +18,10 @@
         "connections": [
             {
                 "from": "NYT Best Sellers Raw Data",
-                "to": "Parsing Parsing and Transformations Transformation"
+                "to": "Change Parsing"
             },
             {
-                "from": "Parsing Parsing and Transformations Transformation",
+                "from": "Change Parsing",
                 "to": "Top Rated Inexpensive Books"
             }
         ],
@@ -58,11 +58,11 @@
                 "id": "NYT-Best-Sellers-Raw-Data"
             },
             {
-                "name": "Parsing Parsing and Transformations Transformation",
+                "name": "Change Parsing",
                 "plugin": {
                     "name": "Wrangler",
                     "type": "transform",
-                    "label": "Parsing Parsing and Transformations Transformation",
+                    "label": "Change Parsing",
                     "artifact": {
                         "name": "wrangler-transform",
                         "version": "4.4.1",
@@ -109,7 +109,7 @@
                 "outputSchema": "{\"type\":\"record\",\"name\":\"etlSchemaBody\",\"fields\":[{\"name\":\"amazon_product_url\",\"type\":[\"string\",\"null\"]},{\"name\":\"author\",\"type\":[\"string\",\"null\"]},{\"name\":\"description\",\"type\":[\"string\",\"null\"]},{\"name\":\"publisher\",\"type\":[\"string\",\"null\"]},{\"name\":\"title\",\"type\":[\"string\",\"null\"]},{\"name\":\"id\",\"type\":[\"string\",\"null\"]},{\"name\":\"rank\",\"type\":[\"long\",\"null\"]},{\"name\":\"price_final\",\"type\":[\"double\",\"null\"]}]}",
                 "inputSchema": [
                     {
-                        "name": "Parsing Parsing and Transformations Transformation",
+                        "name": "Change Parsing",
                         "schema": "{\"type\":\"record\",\"name\":\"etlSchemaBody\",\"fields\":[{\"name\":\"amazon_product_url\",\"type\":[\"string\",\"null\"]},{\"name\":\"author\",\"type\":[\"string\",\"null\"]},{\"name\":\"description\",\"type\":[\"string\",\"null\"]},{\"name\":\"publisher\",\"type\":[\"string\",\"null\"]},{\"name\":\"title\",\"type\":[\"string\",\"null\"]},{\"name\":\"id\",\"type\":[\"string\",\"null\"]},{\"name\":\"rank\",\"type\":[\"long\",\"null\"]},{\"name\":\"price_final\",\"type\":[\"double\",\"null\"]}]}"
                     }
                 ],
