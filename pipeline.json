@@ -58,7 +58,7 @@
                 "id": "NYT-Best-Sellers-Raw-Data"
             },
             {
-                "name": "Parsing aandd Transformations",
+                "name": "Parsing and Transformations",
                 "plugin": {
                     "name": "Wrangler",
                     "type": "transform",
