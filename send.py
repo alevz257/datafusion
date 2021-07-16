@@ -1,7 +1,7 @@
 import requests
 import os
 
-print(os.environ['CDAP_ENDPOINT'])
+#print(os.environ['CDAP_ENDPOINT'])
 
 
 urlSuffix = '/v3/namespaces/default/apps/DataFusionQuickstart'
@@ -12,7 +12,8 @@ tokenAuth = 'Bearer ' + os.environ['AUTH_TOKEN']
 #print(tokenAuth)
 
 headers = {'Content-Type': 'application/json', 'Authorization': tokenAuth }
-print(headers)
+#print(headers)
+print('Deploying -- pipeline.json -- ')
 
 r = requests.put(url, data=open('pipeline.json', 'rb'), headers=headers)
 print('finished uploading pipeline.json to datafusion')
